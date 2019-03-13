@@ -1,0 +1,19 @@
+server:
+  port: 8762
+
+spring:
+  application:
+    # 如果通过 spring cloud config 读取文件的话，读取的文件名称会与 spring.application.name 有关
+    # 这里相当于会读取 eureka-client-dev.yml 或 properties 文件
+    name: eureka-client
+  cloud:
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:8888
+
+eureka:
+  client:
+    service-url:
+      # 指定服务注册中心地址
+      defaultZone: http://localhost:8761/eureka
