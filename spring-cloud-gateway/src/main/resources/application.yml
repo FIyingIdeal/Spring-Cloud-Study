@@ -1,0 +1,25 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      routes:
+      -  id: path-route
+         uri: lb://eureka-client
+         predicates:
+          - Path=/provider/**
+          - Method=GET
+         filters:
+           # 添加请求参数 name=test
+           - AddRequestParameter=name, test
+           # 用于截取路径，数字表示截取路径长度（ / 与 / 之间的为一个路径长度）
+           # 如：请求路径为 localhost:8888/provider/hello  (请求网关)，网关请求转发路径为 eureka-client/hello，中间的/provider 被截掉了
+           - StripPrefix=1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

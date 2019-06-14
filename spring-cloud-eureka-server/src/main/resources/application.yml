@@ -4,8 +4,8 @@ eureka:
   instance:
     hostname: localhost
   client:
-    # Ä¬ÈÏÇé¿öÏÂ eureka server Ò²ÊÇÒ»¸ö eureka client£¬±ØĞëÖ¸¶¨Ò»¸ö server¡£
-    # register-with-eureka: false ºÍ fetch-registry: false À´±íÃ÷ÕâÊÇÒ»¸ö eureka server
+    # é»˜è®¤æƒ…å†µä¸‹ eureka server ä¹Ÿæ˜¯ä¸€ä¸ª eureka clientï¼Œå¿…é¡»æŒ‡å®šä¸€ä¸ª serverã€‚
+    # register-with-eureka: false å’Œ fetch-registry: false æ¥è¡¨æ˜è¿™æ˜¯ä¸€ä¸ª eureka server
     register-with-eureka: false
     fetch-registry: false
     service-url:
