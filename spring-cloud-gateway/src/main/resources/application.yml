@@ -18,6 +18,10 @@ spring:
            # 用于截取路径，数字表示截取路径长度（ / 与 / 之间的为一个路径长度）
            # 如：请求路径为 localhost:8888/provider/hello  (请求网关)，网关请求转发路径为 eureka-client/hello，中间的/provider 被截掉了
            - StripPrefix=1
+      - id: provider-service
+        uri: lb://provider-service
+        predicates:
+          - Path=/test-provider/**
 
 eureka:
   client:

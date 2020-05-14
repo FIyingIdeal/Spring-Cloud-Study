@@ -6,7 +6,7 @@
 		<groupId>com.flyingideal</groupId>
 		<artifactId>spring-cloud-study</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<groupId>com.flyingideal</groupId>
 	<artifactId>spring-cloud-feign</artifactId>

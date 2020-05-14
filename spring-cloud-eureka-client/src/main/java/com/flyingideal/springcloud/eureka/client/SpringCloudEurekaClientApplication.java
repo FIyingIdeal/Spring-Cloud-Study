@@ -28,6 +28,7 @@ public class SpringCloudEurekaClientApplication {
 	public String home(
 			@RequestParam(name = "name", defaultValue = "flyingideal") String name) {
 		// String configFoo = "This is from config server foo value : " + foo;
+		System.out.println("hahahahahahahahahahahahah");
 		return "Hello, " + name + "! I'm from port: " + port + " >> "; //+ configFoo;
 	}
 }

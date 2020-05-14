@@ -1,8 +1,10 @@
 server:
   port: 8763
+  servlet:
+    context-path: /test-provider
 spring:
   application:
-    name: eureka-client
+    name: provider-service
 eureka:
   client:
     service-url:
